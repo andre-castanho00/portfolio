@@ -13,3 +13,19 @@
   --shadow-hover: rgba(0, 0, 0, 0.1);
   --border-color: #e1e8ed;
 }
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #e4e4e4;
+  --text-secondary: #b8b8b8;
+  --text-light: #f0f0f0;
+  --accent-primary: #64b5f6;
+  --accent-secondary: #42a5f5;
+  --gradient-start: #667eea;
+  --gradient-end: #764ba2;
+  --card-bg: #2d2d2d;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(0, 0, 0, 0.4);
+  --border-color: #404040;
+}

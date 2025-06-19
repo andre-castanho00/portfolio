@@ -1,3 +1,5 @@
+import "./contacts.css";
+
 function Contacts() {
   return (
     <section id="contact" className="contact">

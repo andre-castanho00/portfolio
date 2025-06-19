@@ -1,8 +1,10 @@
+import "./header.css";
+
 function Header() {
   return (
     <header className="background: var(--bg-primary); backdrop-filter: none;">
       <nav className="container">
-        <div className="logo">JD</div>
+        <div className="logo">AC</div>
         <div className="display: flex; align-items: center;">
           <ul className="nav-links">
             <li>

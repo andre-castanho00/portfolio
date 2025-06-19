@@ -1,0 +1,32 @@
+.contact {
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.contact-item {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-item h3 {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
