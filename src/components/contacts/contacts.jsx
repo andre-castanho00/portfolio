@@ -14,18 +14,20 @@ function Contacts() {
           <div className="contact-info">
             <div className="contact-item">
               <h3>Email</h3>
-              <a href="mailto:john@developer.com">john@developer.com</a>
+              <a href="mailto:andrecastanho25@gmail.com">
+                andrecastanho25@gmail.com
+              </a>
             </div>
             <div className="contact-item">
               <h3>LinkedIn</h3>
-              <a href="https://linkedin.com/in/johndeveloper">
-                linkedin.com/in/johndeveloper
+              <a href="https://linkedin.com/in/andre-castanhoo/">
+                linkedin.com/in/andre-castanhoo/
               </a>
             </div>
             <div className="contact-item">
               <h3>GitHub</h3>
-              <a href="https://github.com/johndeveloper">
-                github.com/johndeveloper
+              <a href="https://github.com/andre-castanho00">
+                github.com/andre-castanho00
               </a>
             </div>
           </div>

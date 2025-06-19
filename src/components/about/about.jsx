@@ -9,21 +9,25 @@ function About() {
           <div className="profile-image">👨‍💻</div>
           <div className="about-text">
             <p>
-              I'm a passionate Full Stack Engineer with 5+ years of experience
-              building scalable web applications and digital solutions. I
-              specialize in modern JavaScript frameworks, cloud technologies,
-              and creating seamless user experiences.
+              Hi, I'm André, a Full Stack Developer with expertise in building
+              dynamic and responsive web applications and digital solutions.
+              With a strong foundation in both frontend and backend
+              technologies, I strive to create seamless user experiences and
+              robust server-side functionalities.
             </p>
             <p>
-              My expertise spans both frontend and backend development, with a
-              strong focus on writing clean, maintainable code and following
-              best practices. I enjoy solving complex problems and turning ideas
-              into reality through technology.
+              I'm currently in my 3rd year studying Software Engineer from
+              Instituto Politécnico de Setúbal, where I developed a solid
+              understanding of software engineering principles. Over the years,
+              I've improved my skills in various programming languages and
+              frameworks, more about that below.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open source projects, or sharing knowledge with
-              the developer community.
+              I believe in writing clean, efficient, and maintainable code. My
+              approach involves thorough planning, iterative development, and
+              testing to ensure that every application I build is scalable and
+              reliable. I am always keen to learn new technologies and best
+              practices and newer frameworks to improve.
             </p>
           </div>
         </div>
