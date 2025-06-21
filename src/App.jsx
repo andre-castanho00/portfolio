@@ -7,6 +7,10 @@ import Hero from "./components/hero/hero";
 import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
 
+/**
+ * The main app component, which simply renders all the other components.
+ * @returns {React.ReactElement} The JSX for the app.
+ */
 function App() {
   return (
     <>

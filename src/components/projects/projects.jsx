@@ -6,81 +6,46 @@ function Projects() {
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">
-          <div className="project-card">
-            <div className="project-image">🚀</div>
-            <div className="project-content">
-              <h3>E-Commerce Platform</h3>
-              <p>
-                A full-featured e-commerce platform with user authentication,
-                payment processing, and admin dashboard. Built with modern
-                technologies for scalability and performance.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">PostgreSQL</span>
-                <span className="tech-tag">Stripe API</span>
-              </div>
-              <div className="project-links">
-                <a href="#" className="project-link">
-                  Live Demo
-                </a>
-                <a href="#" className="project-link">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="project-image">📱</div>
-            <div className="project-content">
-              <h3>Task Management App</h3>
-              <p>
-                A collaborative task management application with real-time
-                updates, team collaboration features, and intuitive
-                drag-and-drop interface.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">Vue.js</span>
-                <span className="tech-tag">Express.js</span>
-                <span className="tech-tag">Socket.io</span>
-                <span className="tech-tag">MongoDB</span>
-              </div>
-              <div className="project-links">
-                <a href="#" className="project-link">
-                  Live Demo
-                </a>
-                <a href="#" className="project-link">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="project-image">📊</div>
-            <div className="project-content">
-              <h3>Analytics Dashboard</h3>
-              <p>
-                A comprehensive analytics dashboard with interactive charts,
-                real-time data visualization, and customizable reporting
-                features for business insights.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">TypeScript</span>
-                <span className="tech-tag">D3.js</span>
-                <span className="tech-tag">Python</span>
-              </div>
-              <div className="project-links">
-                <a href="#" className="project-link">
-                  Live Demo
-                </a>
-                <a href="#" className="project-link">
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
+          <ProjectCard
+            image={"/carbonvault_thumbnail.png"}
+            title={"Carbon Vault"}
+            description={
+              "A full-featured e-commerce platform with user authentication, payment processing, and admin dashboard. Built with modern technologies for scalability and performance."
+            }
+            tags={[
+              "C#",
+              "TypeScript",
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Azure",
+              "Stripe API",
+            ]}
+            links={[
+              "https://carbonvaultclient-h8cuhcfma2exc4bu.northeurope-01.azurewebsites.net/",
+              "https://github.com/rodrigosantos003/carbon-vault",
+            ]}
+          />
+
+          <ProjectCard
+            image={"/test.jpg"}
+            title={"Task Management App"}
+            description={
+              "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface."
+            }
+            tags={["Vue.js", "Express.js", "Socket.io", "MongoDB"]}
+            links={["#", "#"]}
+          />
+
+          <ProjectCard
+            image={"/test.jpg"}
+            title={"Analytics Dashboard"}
+            description={
+              "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features for business insights."
+            }
+            tags={["React", "TypeScript", "D3.js", "Python"]}
+            links={["#", "#"]}
+          />
         </div>
       </div>
     </section>
@@ -88,3 +53,42 @@ function Projects() {
 }
 
 export default Projects;
+
+export function ProjectCard({ image, title, description, tags, links }) {
+  return (
+    <div className="project-card">
+      <div className="project-image">
+        <img className="project-img" src={image} alt={title} />
+      </div>
+      <div className="project-content">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className="project-tech">
+          {tags.map((tag, index) => (
+            <span key={index} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="project-links">
+          <a
+            href={links[0]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            Live Demo
+          </a>
+          <a
+            href={links[1]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
