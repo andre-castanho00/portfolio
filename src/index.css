@@ -12,6 +12,10 @@
   --shadow: rgba(0, 0, 0, 0.08);
   --shadow-hover: rgba(0, 0, 0, 0.1);
   --border-color: #e1e8ed;
+  --frontend-color: #3b82f6;
+  --backend-color: #7354af;
+  --database-color: #10b981;
+  --tools-color: #d97706;
 }
 
 [data-theme="dark"] {
@@ -28,4 +32,8 @@
   --shadow: rgba(0, 0, 0, 0.3);
   --shadow-hover: rgba(0, 0, 0, 0.4);
   --border-color: #404040;
+  --frontend-color: #3b82f6;
+  --backend-color: #7354af;
+  --database-color: #10b981;
+  --tools-color: #d97706;
 }

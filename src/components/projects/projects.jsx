@@ -1,5 +1,14 @@
 import "./projects.css";
 
+/**
+ * @function Projects
+ * @description A component that renders the 'Featured Projects' section of the portfolio.
+ * This section displays a collection of project cards, each highlighting a specific project
+ * with its corresponding image, title, description, technologies used, and links.
+ * The layout is organized in a grid format for better visual presentation.
+ * @returns {JSX.Element} A JSX element representing the 'Featured Projects' section.
+ */
+
 function Projects() {
   return (
     <section id="projects" className="projects">
@@ -29,12 +38,12 @@ function Projects() {
 
           <ProjectCard
             image={"/test.jpg"}
-            title={"Task Management App"}
+            title={"Personal Portfolio"}
             description={
               "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface."
             }
-            tags={["Vue.js", "Express.js", "Socket.io", "MongoDB"]}
-            links={["#", "#"]}
+            tags={["React", "JavaScript", "CSS", "HTML", "Vercel"]}
+            links={["#", "https://github.com/andre-castanho00/portfolio"]}
           />
 
           <ProjectCard
@@ -54,6 +63,20 @@ function Projects() {
 
 export default Projects;
 
+/**
+ * @function ProjectCard
+ * @description A component that renders a single project card, which consists of
+ * an image, title, description, list of technologies used, and links to the
+ * project's live demo and GitHub repository.
+ * @param {{ image: string, title: string, description: string, tags: string[], links: string[] }} props
+ * @prop {string} image The path to the project image.
+ * @prop {string} title The title of the project.
+ * @prop {string} description A brief description of the project.
+ * @prop {string[]} tags A list of technologies used in the project.
+ * @prop {string[]} links A list of links to the project's live demo and GitHub
+ * repository.
+ * @returns {JSX.Element} A JSX element representing a single project card.
+ */
 export function ProjectCard({ image, title, description, tags, links }) {
   return (
     <div className="project-card">

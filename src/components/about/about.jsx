@@ -1,5 +1,15 @@
 import "./about.css";
 
+/**
+ * @function About
+ * @description A component that renders the 'About Me' section of the portfolio.
+ * It includes personal information about André, highlighting his experience as a
+ * Full Stack Developer, his educational background, skills, and his approach to
+ * software development. The section is designed to display an overview of André's
+ * professional journey and expertise in building web applications.
+ * @returns {JSX.Element} A JSX element representing the 'About Me' section.
+ */
+
 function About() {
   return (
     <section id="about" className="about">

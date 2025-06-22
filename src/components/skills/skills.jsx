@@ -28,21 +28,25 @@ function Skills() {
         <h2 className="section-title">Skills &amp; Technologies</h2>
         <div className="skills-grid">
           <SkillCategory
+            color={"var(--frontend-color)"}
             skillCategory="Frontend Development"
             skillsList={frontendSkills}
           />
 
           <SkillCategory
+            color={"var(--backend-color)"}
             skillCategory="Backend Development"
             skillsList={backendSkills}
           />
 
           <SkillCategory
+            color={"var(--database-color)"}
             skillCategory="Database &amp; Cloud"
             skillsList={databaseSkills}
           />
 
           <SkillCategory
+            color={"var(--tools-color)"}
             skillCategory="Tools &amp; Others"
             skillsList={otherSkills}
           />
@@ -61,13 +65,13 @@ export default Skills;
  * @param {array} skillsList A list of skills in the category.
  * @returns {object} A JSX element representing the category of skills.
  */
-export function SkillCategory({ skillCategory, skillsList }) {
+export function SkillCategory({ color, skillCategory, skillsList }) {
   return (
-    <div className="skill-category">
+    <div className="skill-category" style={{ border: `3px solid ${color}` }}>
       <h3>{skillCategory}</h3>
       <div className="skill-tags">
         {skillsList.map((skill) => (
-          <span key={skill} className="skill-tag">
+          <span key={skill} className="skill-tag" style={{ background: color }}>
             {skill}
           </span>
         ))}

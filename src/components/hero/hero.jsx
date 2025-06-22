@@ -1,5 +1,11 @@
 import "./hero.css";
 
+/**
+ * @function Hero
+ * @description A component that renders the hero section of the website.
+ * The section includes a heading, a paragraph, and a call-to-action button.
+ * @returns {React.ReactElement} A JSX element representing the hero section.
+ */
 function Hero() {
   return (
     <section id="home" className="hero">

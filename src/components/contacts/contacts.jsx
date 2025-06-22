@@ -1,5 +1,12 @@
 import "./contacts.css";
 
+/**
+ * @function Contacts
+ * @description A component that renders a simple contact section with some
+ * basic information and links to my email, LinkedIn, and GitHub profiles.
+ * @returns {object} A JSX element representing the Contact section of the
+ * website.
+ */
 function Contacts() {
   return (
     <section id="contact" className="contact">

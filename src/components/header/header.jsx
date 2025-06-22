@@ -1,5 +1,14 @@
 import "./header.css";
 
+/**
+ * Header component that renders the main navigation header for the website.
+ * It includes a logo and navigation links for different sections of the site:
+ * Home, About, Skills, Projects, and Contact. The component also contains
+ * commented code for a theme toggle button.
+ *
+ * @returns {JSX.Element} The JSX element representing the header section.
+ */
+
 function Header() {
   return (
     <header className="background: var(--bg-primary); backdrop-filter: none;">

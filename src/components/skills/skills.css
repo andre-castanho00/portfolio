@@ -32,8 +32,9 @@
 }
 
 .skill-tag {
-  background: var(--accent-primary);
-  color: var(--bg-primary);
+  /* background: var(--accent-primary); */
+  /* color: var(--bg-primary); */
+  color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
