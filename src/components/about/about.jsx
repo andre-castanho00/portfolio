@@ -16,7 +16,7 @@ function About() {
       <div className="container">
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
-          <div className="profile-image">👨‍💻</div>
+          <div className="profile-image"></div>
           <div className="about-text">
             <p>
               Hi, I'm André, a Full Stack Developer with expertise in building

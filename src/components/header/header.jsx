@@ -9,11 +9,12 @@ import "./header.css";
  * @returns {JSX.Element} The JSX element representing the header section.
  */
 
-function Header() {
+function Header({ isDarkMode }) {
   return (
     <header className="background: var(--bg-primary); backdrop-filter: none;">
       <nav className="container">
-        <div className="logo">AC</div>
+        {/* <div className="logo">AC</div> */}
+        <img style={{ maxWidth: "350px" }} src={isDarkMode ? "/my-logo-white-v2.png" : "/my-logo-black-v2.png"} alt="logo" />
         <div className="display: flex; align-items: center;">
           <ul className="nav-links">
             <li>

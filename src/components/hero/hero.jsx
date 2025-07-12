@@ -1,6 +1,5 @@
 import "./hero.css";
 import "./themeToggle.css";
-import { useState, useEffect } from "react";
 
 /**
  * @function Hero
@@ -8,25 +7,7 @@ import { useState, useEffect } from "react";
  * The section includes a heading, a paragraph, and a call-to-action button.
  * @returns {React.ReactElement} A JSX element representing the hero section.
  */
-function Hero() {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
-  });
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prev) => !prev);
-  };
-
+function Hero({ toggleTheme, isDarkMode }) {
   return (
     <section id="home" className="hero">
       <div className="container">
