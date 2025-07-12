@@ -20,7 +20,14 @@ function Skills() {
     "C",
   ];
   const databaseSkills = ["MySQL", "SSMS", "MongoDB", "Azure", "Firebase"];
-  const otherSkills = ["VS Code", "Git", "GitHub", "Jira", "Trello", "Slack"];
+  const otherSkills = [
+    "VS Code",
+    "Git",
+    "GitHub",
+    "Confluence",
+    "Figma",
+    "Jira",
+  ];
 
   return (
     <section id="skills" className="skills">

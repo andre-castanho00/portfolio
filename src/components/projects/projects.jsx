@@ -19,16 +19,17 @@ function Projects() {
             image={"/carbonvault_thumbnail.png"}
             title={"Carbon Vault"}
             description={
-              "A full-featured e-commerce platform with user authentication, payment processing, and admin dashboard. Built with modern technologies for scalability and performance."
+              "A full-featured e-commerce platform built for buying and selling Carbon Credits with a marketplace, user authentication, payment processing, user and admin dashboard and more. Built with modern technologies for scalability and performance as well as deployment on Azure."
             }
             tags={[
               "C#",
+              "Angular",
+              "ASP.NET Core",
               "TypeScript",
-              "HTML",
-              "CSS",
-              "JavaScript",
               "Azure",
               "Stripe API",
+              "HTML",
+              "CSS",
             ]}
             links={[
               "https://carbonvaultclient-h8cuhcfma2exc4bu.northeurope-01.azurewebsites.net/",
@@ -37,23 +38,26 @@ function Projects() {
           />
 
           <ProjectCard
-            image={"/test.jpg"}
-            title={"Personal Portfolio"}
+            image={"/trading_calc_thumbnail.png"}
+            title={"Trading Leverage Calculator"}
             description={
-              "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface."
+              "A simple React-based tool that allows you to calculate the leverage you need to enter a trade. The tool takes into account the stop loss percentage, the capital to enter the trade, and the amount you want to risk. The tool then calculates the leverage you need to enter the trade."
             }
-            tags={["React", "JavaScript", "CSS", "HTML", "Vercel"]}
-            links={["#", "https://github.com/andre-castanho00/portfolio"]}
+            tags={["React", "Vite", "JavaScript", "CSS"]}
+            links={[
+              "https://crypto-leverage-calculator.vercel.app/",
+              "https://github.com/andre-castanho00/Crypto-Leverage-Calculator",
+            ]}
           />
 
           <ProjectCard
             image={"/test.jpg"}
-            title={"Analytics Dashboard"}
+            title={"André Castanho | Portfolio"}
             description={
-              "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features for business insights."
+              "Personal Portfolio designed and developed using React.js and Vite, showcasing my skills and experience as a Full Stack Developer and Software Engineer. It serves as presentation of my work, background, and the projects I’ve contributed to."
             }
-            tags={["React", "TypeScript", "D3.js", "Python"]}
-            links={["#", "#"]}
+            tags={["React", "JavaScript", "CSS", "HTML", "Vercel"]}
+            links={["#", "https://github.com/andre-castanho00/portfolio"]}
           />
         </div>
       </div>
@@ -81,7 +85,9 @@ export function ProjectCard({ image, title, description, tags, links }) {
   return (
     <div className="project-card">
       <div className="project-image">
-        <img className="project-img" src={image} alt={title} />
+        <a className="project-img" href={links[0]} target="_blank" rel="noopener noreferrer">
+          <img className="project-img" src={image} alt={title} />
+        </a>
       </div>
       <div className="project-content">
         <h3>{title}</h3>
@@ -100,8 +106,9 @@ export function ProjectCard({ image, title, description, tags, links }) {
             rel="noopener noreferrer"
             className="project-link"
           >
-            Live Demo
+            Live Website
           </a>
+          <div>|</div>
           <a
             href={links[1]}
             target="_blank"
