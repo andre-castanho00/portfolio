@@ -15,7 +15,14 @@ import { useEffect, useState } from "react";
  */
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme) {
+      return storedTheme === "dark";
+    }
+
+    // Default to dark if no theme is stored
+    return true;
   });
 
   useEffect(() => {
@@ -38,8 +45,8 @@ function App() {
       <Hero toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <About />
       <Skills />
-      <Projects />
-      <Contacts />
+      <Projects isDarkMode={isDarkMode} />
+      <Contacts isDarkMode={isDarkMode} />
       <Footer />
     </>
   );

@@ -26,11 +26,14 @@ function About() {
               robust server-side functionalities.
             </p>
             <p>
-              I'm currently in my 3rd year studying Software Engineer from
-              Instituto Politécnico de Setúbal, where I developed a solid
-              understanding of software engineering principles. Over the years,
-              I've improved my skills in various programming languages and
-              frameworks, more about that below.
+              I have a Bachelor's Degree in Software Engineer from{" "}
+              <a style={{ color: "var(--accent-primary)" }} target="_blank" rel="noopener noreferrer" href="https://estsetubal.ips.pt/">
+                Instituto Politécnico de Setúbal
+              </a>
+              , where I learned and developed a solid understanding of software
+              engineering principles. Over the years, I've improved my skills in
+              various programming languages and frameworks, more about that
+              below.
             </p>
             <p>
               I believe in writing clean, efficient, and maintainable code. My

@@ -1,4 +1,5 @@
 import "./contacts.css";
+import { GitHub, Linkedin, Email } from "../icons";
 
 /**
  * @function Contacts
@@ -7,7 +8,7 @@ import "./contacts.css";
  * @returns {object} A JSX element representing the Contact section of the
  * website.
  */
-function Contacts() {
+function Contacts({ isDarkMode }) {
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -20,20 +21,29 @@ function Contacts() {
           </p>
           <div className="contact-info">
             <div className="contact-item">
-              <h3>Email</h3>
-              <a href="mailto:andrecastanho25@gmail.com">
+              <div className="contact-icon">
+                <Email />
+                <h3>Email</h3>
+              </div>
+              <a target="_blank" rel="noopener noreferrer" href="mailto:andrecastanho25@gmail.com">
                 andrecastanho25@gmail.com
               </a>
             </div>
             <div className="contact-item">
-              <h3>LinkedIn</h3>
-              <a href="https://linkedin.com/in/andre-castanhoo/">
+              <div className="contact-icon">
+                <Linkedin />
+                <h3>LinkedIn</h3>
+              </div>
+              <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/andre-castanhoo/">
                 linkedin.com/in/andre-castanhoo/
               </a>
             </div>
             <div className="contact-item">
-              <h3>GitHub</h3>
-              <a href="https://github.com/andre-castanho00">
+              <div className="contact-icon">
+                <GitHub color={isDarkMode ? "#ffffff" : "#000000"} />
+                <h3>GitHub</h3>
+              </div>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/andre-castanho00">
                 github.com/andre-castanho00
               </a>
             </div>

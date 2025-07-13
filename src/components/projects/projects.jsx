@@ -1,4 +1,5 @@
 import "./projects.css";
+import { GitHub, Website } from "../icons";
 
 /**
  * @function Projects
@@ -9,7 +10,7 @@ import "./projects.css";
  * @returns {JSX.Element} A JSX element representing the 'Featured Projects' section.
  */
 
-function Projects() {
+function Projects({ isDarkMode }) {
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -35,6 +36,7 @@ function Projects() {
               "https://carbonvaultclient-h8cuhcfma2exc4bu.northeurope-01.azurewebsites.net/",
               "https://github.com/rodrigosantos003/carbon-vault",
             ]}
+            isDarkMode={isDarkMode}
           />
 
           <ProjectCard
@@ -48,16 +50,18 @@ function Projects() {
               "https://crypto-leverage-calculator.vercel.app/",
               "https://github.com/andre-castanho00/Crypto-Leverage-Calculator",
             ]}
+            isDarkMode={isDarkMode}
           />
 
           <ProjectCard
-            image={"/test.jpg"}
+            image={"/SEO/SEO_thumbnail.png"}
             title={"André Castanho | Portfolio"}
             description={
               "Personal Portfolio designed and developed using React.js and Vite, showcasing my skills and experience as a Full Stack Developer and Software Engineer. It serves as presentation of my work, background, and the projects I’ve contributed to."
             }
             tags={["React", "JavaScript", "CSS", "HTML", "Vercel"]}
             links={["#", "https://github.com/andre-castanho00/portfolio"]}
+            isDarkMode={isDarkMode}
           />
         </div>
       </div>
@@ -81,12 +85,28 @@ export default Projects;
  * repository.
  * @returns {JSX.Element} A JSX element representing a single project card.
  */
-export function ProjectCard({ image, title, description, tags, links }) {
+export function ProjectCard({
+  image,
+  title,
+  description,
+  tags,
+  links,
+  isDarkMode,
+}) {
   return (
     <div className="project-card">
       <div className="project-image">
-        <a className="project-img" href={links[0]} target="_blank" rel="noopener noreferrer">
-          <img className="project-img" src={image} alt={title} />
+        <a
+          className="project-img"
+          href={links[0]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="project-img"
+            src={image ? image : "/test.jpg"}
+            alt={title}
+          />
         </a>
       </div>
       <div className="project-content">
@@ -100,23 +120,29 @@ export function ProjectCard({ image, title, description, tags, links }) {
           ))}
         </div>
         <div className="project-links">
-          <a
-            href={links[0]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link"
-          >
-            Live Website
-          </a>
+          <div className="contact-icon">
+            <Website />
+            <a
+              href={links[0]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              Live Website
+            </a>
+          </div>
           <div>|</div>
-          <a
-            href={links[1]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link"
-          >
-            GitHub
-          </a>
+          <div className="contact-icon">
+            <GitHub color={isDarkMode ? "#ffffff" : "#000000"} />
+            <a
+              href={links[1]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
