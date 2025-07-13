@@ -8,7 +8,14 @@ import { GitHub, Linkedin, Email } from "../icons";
  * @returns {object} A JSX element representing the Contact section of the
  * website.
  */
-function Contacts({ isDarkMode }) {
+function Contacts({ isDarkMode, ReactGA }) {
+  const handleClick = (cat, action) => {
+    ReactGA.event({
+      category: cat,
+      action: action,
+    });
+  };
+
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -25,7 +32,12 @@ function Contacts({ isDarkMode }) {
                 <Email />
                 <h3>Email</h3>
               </div>
-              <a target="_blank" rel="noopener noreferrer" href="mailto:andrecastanho25@gmail.com">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:andrecastanho25@gmail.com"
+                onClick={() => handleClick("Email", "Clicked on email link")}
+              >
                 andrecastanho25@gmail.com
               </a>
             </div>
@@ -34,7 +46,14 @@ function Contacts({ isDarkMode }) {
                 <Linkedin />
                 <h3>LinkedIn</h3>
               </div>
-              <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/andre-castanhoo/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://linkedin.com/in/andre-castanhoo/"
+                onClick={() =>
+                  handleClick("LinkedIn", "Clicked on LinkedIn link")
+                }
+              >
                 linkedin.com/in/andre-castanhoo/
               </a>
             </div>
@@ -43,7 +62,12 @@ function Contacts({ isDarkMode }) {
                 <GitHub color={isDarkMode ? "#ffffff" : "#000000"} />
                 <h3>GitHub</h3>
               </div>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/andre-castanho00">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/andre-castanho00"
+                onClick={() => handleClick("GitHub", "Clicked on GitHub link")}
+              >
                 github.com/andre-castanho00
               </a>
             </div>

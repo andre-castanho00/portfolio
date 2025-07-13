@@ -7,6 +7,10 @@ import Hero from "./components/hero/hero";
 import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
 
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-01JFDT7N4Z");
+
 import { useEffect, useState } from "react";
 
 /**
@@ -21,9 +25,12 @@ function App() {
       return storedTheme === "dark";
     }
 
-    // Default to dark if no theme is stored
     return true;
   });
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -37,16 +44,21 @@ function App() {
 
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);
+
+    ReactGA.event({
+      category: "Theme",
+      action: isDarkMode ? "Light" : "Dark",
+    });
   };
 
   return (
     <>
       <Header isDarkMode={isDarkMode} />
       <Hero toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <About />
+      <About ReactGA={ReactGA} />
       <Skills />
-      <Projects isDarkMode={isDarkMode} />
-      <Contacts isDarkMode={isDarkMode} />
+      <Projects isDarkMode={isDarkMode} ReactGA={ReactGA} />
+      <Contacts isDarkMode={isDarkMode} ReactGA={ReactGA} />
       <Footer />
     </>
   );

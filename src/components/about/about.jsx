@@ -10,7 +10,14 @@ import "./about.css";
  * @returns {JSX.Element} A JSX element representing the 'About Me' section.
  */
 
-function About() {
+function About({ ReactGA }) {
+  const handleClick = () => {
+    ReactGA.event({
+      category: "IPS",
+      action: "Visit IPS website",
+    });
+  };
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -27,7 +34,13 @@ function About() {
             </p>
             <p>
               I have a Bachelor's Degree in Software Engineer from{" "}
-              <a style={{ color: "var(--accent-primary)" }} target="_blank" rel="noopener noreferrer" href="https://estsetubal.ips.pt/">
+              <a
+                style={{ color: "var(--accent-primary)" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://estsetubal.ips.pt/"
+                onClick={handleClick}
+              >
                 Instituto Politécnico de Setúbal
               </a>
               , where I learned and developed a solid understanding of software

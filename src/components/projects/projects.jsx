@@ -10,7 +10,7 @@ import { GitHub, Website } from "../icons";
  * @returns {JSX.Element} A JSX element representing the 'Featured Projects' section.
  */
 
-function Projects({ isDarkMode }) {
+function Projects({ isDarkMode, ReactGA }) {
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -37,6 +37,7 @@ function Projects({ isDarkMode }) {
               "https://github.com/rodrigosantos003/carbon-vault",
             ]}
             isDarkMode={isDarkMode}
+            ReactGA={ReactGA}
           />
 
           <ProjectCard
@@ -51,6 +52,7 @@ function Projects({ isDarkMode }) {
               "https://github.com/andre-castanho00/Crypto-Leverage-Calculator",
             ]}
             isDarkMode={isDarkMode}
+            ReactGA={ReactGA}
           />
 
           <ProjectCard
@@ -60,8 +62,12 @@ function Projects({ isDarkMode }) {
               "Personal Portfolio designed and developed using React.js and Vite, showcasing my skills and experience as a Full Stack Developer and Software Engineer. It serves as presentation of my work, background, and the projects I’ve contributed to."
             }
             tags={["React", "JavaScript", "CSS", "HTML", "Vercel"]}
-            links={["#", "https://github.com/andre-castanho00/portfolio"]}
+            links={[
+              "https://andrecastanho-portfolio.vercel.app/",
+              "https://github.com/andre-castanho00/portfolio",
+            ]}
             isDarkMode={isDarkMode}
+            ReactGA={ReactGA}
           />
         </div>
       </div>
@@ -92,7 +98,15 @@ export function ProjectCard({
   tags,
   links,
   isDarkMode,
+  ReactGA,
 }) {
+  const handleClick = (cat, action) => {
+    ReactGA.event({
+      category: cat,
+      action: action,
+    });
+  };
+
   return (
     <div className="project-card">
       <div className="project-image">
@@ -101,6 +115,7 @@ export function ProjectCard({
           href={links[0]}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleClick({ title }, `Visit ${title} website`)}
         >
           <img
             className="project-img"
@@ -127,6 +142,7 @@ export function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
+              onClick={() => handleClick({ title }, `Visit ${title} website`)}
             >
               Live Website
             </a>
@@ -139,6 +155,7 @@ export function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
+              onClick={() => handleClick({ title }, `Visit ${title} GitHub`)}
             >
               GitHub
             </a>
