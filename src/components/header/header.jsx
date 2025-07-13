@@ -15,7 +15,7 @@ function Header({ isDarkMode }) {
       <nav className="container">
         {/* <div className="logo">AC</div> */}
         <img style={{ maxWidth: "350px" }} src={isDarkMode ? "/images/my-logo-white-v2.png" : "/images/my-logo-black-v2.png"} alt="logo" />
-        <div className="display: flex; align-items: center;">
+        <div className="nav">
           <ul className="nav-links">
             <li>
               <a href="#home">Home</a>

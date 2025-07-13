@@ -1,0 +1,45 @@
+@media (max-width: 768px) {
+  /* .nav-links {
+    display: none;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  } */
+
+  .nav {
+    display: none;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-text {
+    margin: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+}

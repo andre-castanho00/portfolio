@@ -1,4 +1,5 @@
 import "./App.css";
+import "./responsive.css";
 import About from "./components/about/about";
 import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
