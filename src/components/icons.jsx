@@ -1376,18 +1376,49 @@ function Jira() {
   );
 }
 
+function Menu({color = "#000000"}) {
+  return (
+    <svg
+      width="35px"
+      height="35px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <path
+          d="M4 6H20M4 12H20M4 18H20"
+          stroke={color}
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>{" "}
+      </g>
+    </svg>
+  );
+}
+
 export {
   // Contacts
   GitHub,
   Linkedin,
   Email,
   Website,
+
   // Frontend
   Angular,
   React,
   HTML,
   CSS,
   TypeScript,
+
   // Backend
   JavaScript,
   NodeJS,
@@ -1397,16 +1428,21 @@ export {
   SQL,
   Code,
   API,
+
   // Databases
   MySQL,
   SSMS,
   MongoDB,
   Azure,
   Firebase,
+
   // Tools
   VSCode,
   Git,
   Confluence,
   Figma,
   Jira,
+
+  // Menu
+  Menu,
 };

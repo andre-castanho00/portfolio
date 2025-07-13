@@ -66,3 +66,7 @@ nav {
   color: var(--bg-primary);
   transform: translateY(-1px);
 }
+
+.nav-mobile {
+  display: none;
+}
