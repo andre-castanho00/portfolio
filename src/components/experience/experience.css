@@ -1,0 +1,17 @@
+.experience {
+    background: var(--bg-secondary);
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 5rem;
+}
+
+.exp-ul {
+    text-align: justify;
+}
+
+.exp-ul li::marker {
+    color: var(--accent-primary);
+}

@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
 import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
+import Experience from "./components/experience/experience";
 
 import ReactGA from "react-ga4";
 
@@ -57,6 +58,7 @@ function App() {
       <Header isDarkMode={isDarkMode} />
       <Hero toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <About ReactGA={ReactGA} />
+      <Experience />
       <Skills />
       <Projects isDarkMode={isDarkMode} ReactGA={ReactGA} />
       <Contacts isDarkMode={isDarkMode} ReactGA={ReactGA} />
