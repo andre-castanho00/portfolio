@@ -1,11 +1,33 @@
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem;
+}
+
+.skill-category::before {
+  content: attr(data-status);
+  display: none;
+}
+
+.skill-category[data-status="frontend"] {
+  --card-color: var(--frontend-color);
+}
+
+.skill-category[data-status="backend"] {
+  --card-color: var(--backend-color);
+}
+
+.skill-category[data-status="database"] {
+  --card-color: var(--database-color);
+}
+
+.skill-category[data-status="tools"] {
+  --card-color: var(--tools-color);
 }
 
 .skill-category {
   background: var(--card-bg);
+  border: 3px solid var(--card-color);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow);
@@ -26,9 +48,8 @@
 
 .skill-tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .skill-tag {
@@ -41,4 +62,54 @@
   font-weight: 500;
   opacity: 0.9;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: var(--text-light);
+  height: 15px;
+  border-radius: 15px;
+}
+
+.progress-fill::before {
+  content: attr(data-status);
+  content: attr(level-status);
+  display: none;
+}
+
+/* DATA STATUS */
+.progress-fill[data-status="frontend"] {
+  --skill-color: var(--frontend-color);
+}
+
+.progress-fill[data-status="backend"] {
+  --skill-color: var(--backend-color);
+}
+
+.progress-fill[data-status="database"] {
+  --skill-color: var(--database-color);
+}
+
+.progress-fill[data-status="tools"] {
+  --skill-color: var(--tools-color);
+}
+
+/* LEVEL STATUS */
+.progress-fill[level-status="Beginner"] {
+  --percentage: 35%;
+}
+
+.progress-fill[level-status="Intermediate"] {
+  --percentage: 60%;
+}
+
+.progress-fill[level-status="Advanced"] {
+  --percentage: 85%;
+}
+
+.progress-fill {
+  background-color: var(--skill-color);
+  width: var(--percentage);
+  height: 15px;
+  border-radius: 15px;
 }

@@ -8,52 +8,53 @@ import "./skills.css";
  * @returns {object} A JSX element representing the Skills section of the website.
  */
 function Skills() {
-  const frontendSkills = ["React", "Angular", "HTML5", "CSS3", "TypeScript"];
+  const frontendSkills = [["React", "Advanced"], ["Angular", "Intermediate"], ["HTML5", "Advanced"], ["CSS3", "Advanced"], ["TypeScript", "Intermediate"]];
   const backendSkills = [
-    "JavaScript",
-    "Node.js",
-    "Python",
-    "Java",
-    "C#",
-    "SQL",
-    "REST APIs",
-    "C",
+    ["JavaScript", "Advanced"],
+    ["Node.js", "Intermediate"],
+    ["Python", "Intermediate"],
+    ["Java", "Advanced"],
+    ["C#", "Advanced"],
+    ["SQL", "Intermediate"],
+    ["REST APIs", "Intermediate"],
+    ["C", "Beginner"]
   ];
-  const databaseSkills = ["MySQL", "SSMS", "MongoDB", "Azure", "Firebase"];
+  const databaseSkills = [["MySQL", "Intermediate"], ["SSMS", "Intermediate"], ["MongoDB", "Beginner"], ["Azure", "Intermediate"], ["Firebase", "Beginner"]];
   const otherSkills = [
-    "VS Code",
-    "Git",
-    "GitHub",
-    "Confluence",
-    "Figma",
-    "Jira",
+    ["VS Code", "Advanced"],
+    ["Git", "Intermediate"],
+    ["GitHub", "Advanced"],
+    ["Confluence", "Advanced"],
+    ["Figma", "Intermediate"],
+    ["Jira", "Intermediate"]
   ];
 
   return (
     <section id="skills" className="skills">
       <div className="container">
         <h2 className="section-title">Skills &amp; Technologies</h2>
+
         <div className="skills-grid">
           <SkillCategory
-            color={"var(--frontend-color)"}
+            color={"frontend"}
             skillCategory="Frontend Development"
             skillsList={frontendSkills}
           />
 
           <SkillCategory
-            color={"var(--backend-color)"}
+            color={"backend"}
             skillCategory="Backend Development"
             skillsList={backendSkills}
           />
 
           <SkillCategory
-            color={"var(--database-color)"}
+            color={"database"}
             skillCategory="Database &amp; Cloud"
             skillsList={databaseSkills}
           />
 
           <SkillCategory
-            color={"var(--tools-color)"}
+            color={"tools"}
             skillCategory="Tools &amp; Others"
             skillsList={otherSkills}
           />
@@ -74,14 +75,28 @@ export default Skills;
  */
 export function SkillCategory({ color, skillCategory, skillsList }) {
   return (
-    <div className="skill-category" style={{ border: `3px solid ${color}` }}>
+    <div className="skill-category" data-status={color}>
       <h3>{skillCategory}</h3>
       <div className="skill-tags">
         {skillsList.map((skill) => (
-          <span key={skill} className="skill-tag" style={{ background: color }}>
-            {skill}
-          </span>
+          <div>
+            <div className="flex-between">
+              <p>{skill[0]}</p>
+              <p>{skill[1]}</p>
+            </div>
+            <ProgressBar color={color} percentage={skill[1]} />
+          </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+export function ProgressBar({ color, percentage }) {
+  return (
+    <div className="progress-bar">
+      <div className="progress-fill" data-status={color} level-status={percentage}>
+
       </div>
     </div>
   );
