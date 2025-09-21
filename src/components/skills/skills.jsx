@@ -79,12 +79,15 @@ export function SkillCategory({ color, skillCategory, skillsList }) {
       <h3>{skillCategory}</h3>
       <div className="skill-tags">
         {skillsList.map((skill) => (
-          <div>
-            <div className="flex-between">
-              <p>{skill[0]}</p>
-              <p>{skill[1]}</p>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+            <img src={"/logos/React-icon.png"} height={"30px"} />
+            <div style={{ width: "90%" }}>
+              <div className="flex-between">
+                <p>{skill[0]}</p>
+                <p>{skill[1]}</p>
+              </div>
+              <ProgressBar color={color} percentage={skill[1]} />
             </div>
-            <ProgressBar color={color} percentage={skill[1]} />
           </div>
         ))}
       </div>
