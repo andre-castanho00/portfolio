@@ -78,7 +78,7 @@
     flex-direction: column;
   }
 
-  .exp-header a{
+  .exp-header a {
     display: flex;
     justify-content: center;
   }
