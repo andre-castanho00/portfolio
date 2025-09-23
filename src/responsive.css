@@ -58,4 +58,28 @@
     display: flex;
     flex-direction: column;
   }
+
+  .skills-grid {
+    max-width: 430px;
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem !important;
+  }
+
+  .exp-grid-content {
+    max-width: 380px !important;
+  }
+
+  .exp-ul {
+    padding-left: 15px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+  }
+
+  .exp-header a{
+    display: flex;
+    justify-content: center;
+  }
 }

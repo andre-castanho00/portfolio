@@ -28,13 +28,13 @@ function Experience() {
                         logo={rhp}
                         title={"Full Stack Developer (internship)"}
                         place={"RHP (Reliable Healthcare Partners) - Pinhal Novo, Portugal"}
-                        timeline={"April 2025 - Jully 2025 (486 hours)"}
+                        timeline={"April 2025 - Jully 2025"}
                         description={[
                             "Development of web applications in React Vite, React Native, NestJS, Strapi, TypeScript, JavaScript, SQL (MySQL, SQLite).",
                             "Collaboration in an international project in the healthcare area, a scientific platform with an ordering system, user and permission management, customized dashboards, and article approval workflows.",
                             "Maintenance and updating of websites in WordPress (Elementor, WPBakery, Avada) and Drupal, ensuring content management and module creation.",
                             "Implementation of solutions for event management, document repositories, and digital certification tools with export in multiple formats.",
-                            "Adoption of agile methodologies (Scrum/Kanban) in a multidisciplinary design and development team."
+                            "Experience with agile methodologies (Scrum/Kanban) within a multidisciplinary design and development team."
                         ]}
                     />
                 </div>
@@ -47,8 +47,8 @@ export default Experience;
 
 function ExperienceCard({ logo, title, place, timeline, description }) {
     return (
-        <div style={{ maxWidth: "800px" }}>
-            <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="exp-grid-content">
+            <div className="exp-header">
                 {/* <img src="/images/RHP_Logo.jpg" alt="RHP_Logo" height={"80px"} /> */}
 
                 <a

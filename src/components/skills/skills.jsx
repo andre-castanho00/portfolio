@@ -8,25 +8,38 @@ import "./skills.css";
  * @returns {object} A JSX element representing the Skills section of the website.
  */
 function Skills() {
-  const frontendSkills = [["React", "Advanced"], ["Angular", "Intermediate"], ["HTML5", "Advanced"], ["CSS3", "Advanced"], ["TypeScript", "Intermediate"]];
-  const backendSkills = [
-    ["JavaScript", "Advanced"],
-    ["Node.js", "Intermediate"],
-    ["Python", "Intermediate"],
-    ["Java", "Advanced"],
-    ["C#", "Advanced"],
-    ["SQL", "Intermediate"],
-    ["REST APIs", "Intermediate"],
-    ["C", "Beginner"]
+  const frontendSkills = [
+    ["React", "Advanced", "/logos/React-icon_small.png"], 
+    ["Angular", "Intermediate", "/logos/angular-icon.png"], 
+    ["HTML5", "Advanced", "/logos/html-icon.png"], 
+    ["CSS3", "Advanced", "/logos/css-icon.png"], 
+    ["TypeScript", "Intermediate", "/logos/typescript-icon.png"]
   ];
-  const databaseSkills = [["MySQL", "Intermediate"], ["SSMS", "Intermediate"], ["MongoDB", "Beginner"], ["Azure", "Intermediate"], ["Firebase", "Beginner"]];
+  
+  const backendSkills = [
+    ["JavaScript", "Advanced", "/logos/javascript.png"],
+    ["Node.js", "Intermediate", "/logos/nodejs-icon2.png"],
+    ["Python", "Intermediate", "/logos/python-icon.png"],
+    ["Java", "Advanced", "/logos/java-icon.png"],
+    ["C#", "Advanced", "/logos/cSharp-icon.png"],
+    ["SQL", "Intermediate", "/logos/sql-icon.png"],
+    ["C", "Beginner", "/logos/c-icon.png"]
+  ];
+  
+  const databaseSkills = [
+    ["MySQL", "Intermediate", "/logos/my-sql.png"], 
+    ["SSMS", "Intermediate", "/logos/ssms.png"], 
+    ["MongoDB", "Beginner", "/logos/mongodb.png"], 
+    ["Azure", "Intermediate", "/logos/azure.png"], 
+    ["Firebase", "Beginner", "/logos/firebase.png"]];
+
   const otherSkills = [
-    ["VS Code", "Advanced"],
-    ["Git", "Intermediate"],
-    ["GitHub", "Advanced"],
-    ["Confluence", "Advanced"],
-    ["Figma", "Intermediate"],
-    ["Jira", "Intermediate"]
+    ["VS Code", "Advanced", "/logos/vscode.png"],
+    ["Git", "Intermediate", "/logos/git.png"],
+    ["GitHub", "Advanced", "/logos/github.png"],
+    ["Confluence", "Advanced", "/logos/confluence.png"],
+    ["Figma", "Intermediate", "/logos/figma-icon.png"],
+    ["Jira", "Intermediate", "/logos/jira-icon.png"]
   ];
 
   return (
@@ -80,7 +93,7 @@ export function SkillCategory({ color, skillCategory, skillsList }) {
       <div className="skill-tags">
         {skillsList.map((skill) => (
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-            <img src={"/logos/React-icon.png"} height={"30px"} />
+            <img src={skill[2] || "/logos/React-icon_small.png"} style={{height: "30px"}}/>
             <div style={{ width: "90%" }}>
               <div className="flex-between">
                 <p>{skill[0]}</p>

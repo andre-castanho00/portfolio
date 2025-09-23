@@ -15,3 +15,12 @@
 .exp-ul li::marker {
     color: var(--accent-primary);
 }
+
+.exp-grid-content {
+    max-width: 800px;
+}
+
+.exp-header {
+    display: flex;
+    gap: 1rem;
+}
